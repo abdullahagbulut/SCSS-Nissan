@@ -81,8 +81,8 @@ header {
   }
 
   display: flex;
-  padding: 50px;
-  background: linear-gradient(to top, $background 40%, rgb(215, 215, 215) 40%);
+  padding: 100px;
+  background: linear-gradient(to top, $background 60%, rgb(215, 215, 215) 60%);
 }
 
 #slogan {
@@ -90,7 +90,7 @@ header {
   flex-direction: column;
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 70px;
 
   h1 {
     @extend %baslik;
@@ -110,6 +110,7 @@ header {
   h2 {
     @extend %baslik;
     font-size: 26px;
+    margin-top: 100px;
   }
 
   button {
@@ -138,10 +139,16 @@ header {
 
   &-main {
     max-width: 900px;
+transition: all 0.3s;
 
     @include mobile {
       max-width: 500px;
     }
+  }
+
+  &:hover{
+    transform: translate(-100px,50px);
+    @extend %hover;
   }
 
   &-second {
